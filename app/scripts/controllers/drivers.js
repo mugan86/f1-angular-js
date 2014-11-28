@@ -4,21 +4,38 @@
  * @ngdoc function
  * @name f1App.controller:MainCtrl
  * @description
- * # MainCtrl
+ * # DriversCtrl
  * Controller of the f1App
  */
 angular.module('f1App')
-  .controller('DriversCtrl', function ($scope) {
-    $scope.driversList = [
+  .controller('DriversCtrl', function ($scope, driversService) {
+        driversService.getDrivers()
+            .then(function(hizlariak) {
+
+              //Championship year
+          $scope.champion = hizlariak.data
+              .MRData.StandingsTable
+                .StandingsLists[0];
+            //Drivers data
+
+          $scope.drivers = hizlariak.data
+              .MRData.StandingsTable
+                .StandingsLists[0].DriverStandings;
+        });
+  });
+
+
+/********************************************
+$scope.driversList = [
       {
           Driver: {
               givenName: 'Sebastian',
               familyName: 'Vettel'
           },
           points: 322,
-          nationality: "German",
+          nationality: 'German',
           Constructors: [
-              {name: "Red Bull"}
+              {name: 'Red Bull'}
           ]
       },
       {
@@ -27,9 +44,9 @@ angular.module('f1App')
               familyName: 'Alonso'
           },
           points: 207,
-          nationality: "Spanish",
+          nationality: 'Spanish',
           Constructors: [
-              {name: "Ferrari"}
+              {name: 'Ferrari'}
           ]
       },
       {
@@ -38,10 +55,10 @@ angular.module('f1App')
               familyName: 'Webber'
           },
           points: 199,
-          nationality: "Australian",
+          nationality: 'Australian',
           Constructors: [
-              {name: "Red Bull"}
+              {name: 'Red Bull'}
           ]
       }
     ];
-  });
+***********************************************/

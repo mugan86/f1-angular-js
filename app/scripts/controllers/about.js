@@ -9,7 +9,7 @@
  */
 angular.module('f1App')
   .controller('DriversCtrl', function ($scope) {
-    
+    $scope.about='about';
   });
 
 
