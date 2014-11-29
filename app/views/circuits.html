@@ -1,6 +1,6 @@
 <table class="table table-striped table-bordered">
     <thead>
-      <tr><th colspan="4">Formula One Championship All Circuits</th></tr>
+      <tr><th colspan="5">Formula One Championship All Circuits</th></tr>
     </thead>
     <tbody>
       <tr ng-repeat="circuit in circuits">
@@ -12,6 +12,15 @@
         <td><a href="http://en.m.wikipedia.org/wiki/{{circuit.url.substring(29)}}">
             Review
             </a>
+        </td>
+        <td>
+          {{circuit.Location.lat}}
+        </td>
+         <td>
+          {{circuit.Location.long}}
+        </td>
+        <td>
+          {{circuit.Location.locality}} ({{circuit.Location.country}})
         </td>
       </tr>
     </tbody>
