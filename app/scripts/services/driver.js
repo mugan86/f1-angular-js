@@ -3,9 +3,9 @@
 angular.module('f1App')
   .service('driverService', function driverService($http) {
     return {
-      getDriver: function(id) {
+      getDriver: function(id, year) {
 
-        var url = 'http://ergast.com/api/f1/2014/drivers/'+ id +'/driverStandings.json';
+        var url = 'http://ergast.com/api/f1/'+year+'/drivers/'+ id +'/driverStandings.json';
         
 
         return $http.get(url).success(
@@ -16,9 +16,9 @@ angular.module('f1App')
             }
         );
       },
-      getDriverRaces: function(id) {
+      getDriverRaces: function(id, year) {
 
-        var url = 'http://ergast.com/api/f1/2014/drivers/'+ id +'/results.json';
+        var url = 'http://ergast.com/api/f1/'+year+'/drivers/'+ id +'/results.json';
         
 
         return $http.get(url).success(

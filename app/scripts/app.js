@@ -35,7 +35,7 @@ angular
         templateUrl: 'views/drivers.html',
         controller: 'DriversCtrl'
       })
-      .when('/drivers/:id', {
+      .when('/drivers/:id/:year', {
         templateUrl: 'views/driver.html', 
         controller: 'DriverCtrl'
       })
