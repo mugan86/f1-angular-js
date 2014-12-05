@@ -27,6 +27,10 @@ angular
         templateUrl: 'views/seasons.html',
         controller: 'SeasonsCtrl'
       })
+      .when('/season/:year', {
+        templateUrl: 'views/season.html',
+        controller: 'SeasonCtrl'
+      })
       .when('/circuits', {
         templateUrl: 'views/circuits.html',
         controller: 'CircuitsCtrl'
@@ -35,7 +39,7 @@ angular
         templateUrl: 'views/drivers.html',
         controller: 'DriversCtrl'
       })
-      .when('/drivers/:id/:year', {
+      .when('/driver/:id/:year', {
         templateUrl: 'views/driver.html', 
         controller: 'DriverCtrl'
       })
