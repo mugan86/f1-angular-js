@@ -12,6 +12,30 @@ body {
   padding-right: 15px;
 }
 
+.details {
+    min-height: 200px;
+    display: inline-block;
+}
+
+.skillLine {    
+    display:inline-block;
+    width:100%;
+    padding: 3px 4px;    
+}
+
+.skills {
+    text-decoration:underline;
+}
+
+div.skill {
+    background: #F58723;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    padding: 3px 4px;    
+    width:70px;
+}
+
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;

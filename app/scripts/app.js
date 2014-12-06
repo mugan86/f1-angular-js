@@ -35,6 +35,10 @@ angular
         templateUrl: 'views/circuits.html',
         controller: 'CircuitsCtrl'
       })
+      .when('/circuit/:name', {
+        templateUrl: 'views/circuit.html',
+        controller: 'CircuitCtrl'
+      })
       .when('/drivers', {
         templateUrl: 'views/drivers.html',
         controller: 'DriversCtrl'

@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
+            <div class="well details">
+                <div class="col-sm-12">
+                    <div class="col-xs-12 col-sm-12">
+                        <h2 class="text-center">{{circuit.circuitName}}</h2>
+                        <ul>
+                          <li><strong>Info: </strong><a href="http://en.m.wikipedia.org/wiki/{{circuit.url.substring(29)}}"> Wikipedia</a> </li>
+                          <li><strong>Location Data:</strong>
+                            <ul>
+                              <li>Longitude: {{circuit.Location.long}}</li>
+                              <li>Latitude: {{circuit.Location.lat}}</li>
+                              <li>Locality: {{circuit.Location.locality}}</li>
+                              <li>Country: {{circuit.Location.country}}</li>
+                            </ul>
+                          </li>
+                        </ul>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+</div>
