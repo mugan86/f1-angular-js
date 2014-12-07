@@ -14,4 +14,7 @@ angular.module('f1App')
       'AngularJS',
       'Karma'
     ];
+
+    $scope.loclong = -34.397;
+    $scope.loclat = 150.644;
   });
