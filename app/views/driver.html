@@ -1,6 +1,9 @@
-<p>Year: {{year}}</p>
 <section id="main">
-  <a href="./#/drivers">Back to drivers list</a>
+  <nav>
+  <ul class="pager">
+    <li class="previous"><a href="./#/drivers"><span aria-hidden="true">&larr;</span> Drivers list</a></li>
+  </ul>
+  </nav>
   <nav id="secondary" class="main-nav">
     <div class="driver-picture">
       <div class="avatar">
@@ -29,7 +32,8 @@
         </tr>
         <tr ng-repeat="race in races">
           <td>{{race.round}}</td>
-          <td><img  src="images/flags/{{race.Circuit.Location.country}}.png" />{{race.raceName}}</td>
+          <td><img  src="images/flags/{{race.Circuit.Location.country}}.png" />
+            <a href="{{race.url | allURLWithHTTP}}">{{race.raceName}}</a></td>
           <td>{{race.Results[0].Constructor.name}}</td>
           <td>{{race.Results[0].grid}}</td>
           <td>{{race.Results[0].position}}</td>

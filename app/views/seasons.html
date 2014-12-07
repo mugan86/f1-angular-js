@@ -1,7 +1,11 @@
-<input type="text" ng-model="seasonText" placeholder="Filt in list..."/><br />
+<div class="form-group">
+  <label for="filt">Search season/s:</label>
+  <input type="text" class="form-control" ng-model="seasonText" placeholder="Filt in list..." id="filt">
+</div>
 <table class="table table-striped table-bordered">
     <thead>
-      <tr><th colspan="4">Formula One Championship All Seasons</th></tr>
+      <tr><th colspan="2">Formula One Championship All Seasons</th></tr>
+      <tr><th> Season</th> <th>Summary</th>
     </thead>
     <tbody>
       <tr ng-repeat="season in seasons | filter:seasonText">
@@ -10,7 +14,7 @@
            <a href="#/season/{{season.season}}">
                 {{season.season}}</a>
         </td>
-        <td><a href="http://en.m.wikipedia.org/wiki/{{season.url.substring(29)}}">
+        <td><a href="{{season.url | allURLWithHTTP}}">
             Review
             </a>
         </td>
