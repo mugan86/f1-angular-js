@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the countriesApp
  */
-angular.module('countriesApp')
+angular.module('f1App')
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

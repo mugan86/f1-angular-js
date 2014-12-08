@@ -27,7 +27,7 @@ angular.module('f1App')
         });
         $timeout(function(){ 
             $scope.loading = false;
-            $scope.dataloaad = true;
+            $scope.dataload = true;
         },800);
   });
 

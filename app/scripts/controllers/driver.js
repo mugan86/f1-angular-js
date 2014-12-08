@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name countriesApp.controller:DriverCtrl
+ * @name f1App.controller:DriverCtrl
  * @description
  * # DriverCtrl
- * Controller of the countriesApp
+ * Controller of the f1App
  */
 
 angular.module('f1App')
