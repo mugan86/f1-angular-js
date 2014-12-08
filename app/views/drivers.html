@@ -1,4 +1,5 @@
-<table class="table table-striped table-bordered">
+<img ng-show="loading" src = "../images/progress.GIF" />
+<table ng-show="dataloaad" class="table table-striped table-bordered">
     <thead>
       <tr><th colspan="4">Drivers {{champion.season}} Championship Standings</th></tr>
     </thead>
@@ -14,4 +15,4 @@
         <td>{{driver.points}}</td>
       </tr>
     </tbody>
-  </table>
+</table>

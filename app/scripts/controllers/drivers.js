@@ -8,7 +8,10 @@
  * Controller of the f1App
  */
 angular.module('f1App')
-  .controller('DriversCtrl', function ($scope, driversService) {
+  .controller('DriversCtrl', function ($scope, driversService, $timeout) {
+        $scope.loading = true;
+        $scope.dataloaad = false;
+
         driversService.getDrivers()
             .then(function(hizlariak) {
 
@@ -22,6 +25,10 @@ angular.module('f1App')
               .MRData.StandingsTable
                 .StandingsLists[0].DriverStandings;
         });
+        $timeout(function(){ 
+            $scope.loading = false;
+            $scope.dataloaad = true;
+        },800);
   });
 
 

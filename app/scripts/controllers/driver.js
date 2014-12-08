@@ -9,7 +9,10 @@
  */
 
 angular.module('f1App')
-  .controller('DriverCtrl', function ($scope, $routeParams, driverService) {
+  .controller('DriverCtrl', function ($scope, $routeParams, driverService, $timeout) {
+
+    $scope.loading = true;
+    $scope.dataload = false;
     driverService.getDriver($routeParams.id, $routeParams.year)
         .then(function(id) {
 
@@ -25,5 +28,9 @@ angular.module('f1App')
             
             $scope.races = id.data.MRData.RaceTable.Races;
         });
+    $timeout(function(){ 
+            $scope.loading = false;
+            $scope.dataload = true;
+        },800);
   });
     
