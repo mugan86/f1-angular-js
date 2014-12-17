@@ -16,6 +16,22 @@
   <h4>Karma</h4>
   <p>Spectacular Test Runner for JavaScript.</p>
 </div>
-<map center="[{{loclong}}, {{loclat}}]" zoom="8"></map>
+
+<map center="[40.866667, 34.566667]" zoom="1">
+  <div ng-repeat="marker in circuit">
+  <marker  position="[{{marker.latitude}}, {{marker.longitude}}]" title="{{marker.name}}" on-click="showInfoWindow(event, 'bar')">
+    </marker>
+
+     <info-window id="bar" width="550px" visible-on-marker="foo">
+        <div ng-non-bindable="">
+          
+          <p id="firstHeading" class="firstHeading"><b>{{marker.name}}</b></p>
+
+        </div>
+
+      </info-window>
+    </div>
+  
+</map>
 
 
