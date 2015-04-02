@@ -24,3 +24,15 @@ Jeitsitakoan terminalean:
 * grunt build
 
 Eta jarraian kopiatu hor sortu den "dist" direktorioa zure zerbitzari batera, berdin da Apache, nginx edo dena delakoa erabiltzea, ez du osagai dinamikorik, guztia HTML, CSS eta JavaScript kodea da.
+
+Instalaturik dauden angularjs-eko plugin-ak hauek dira:
+
+* **Webgune eleanitza egiteko:** http://pascalprecht.github.io/slides/i18n-with-angular-translate/#/12/2
+* **Google Maps mapak gehitzeko**: https://ngmap.github.io/
+
+Gehituko diren JS fitxategiak (badaezpada, agian ez ditu hartuko...)
+
+<script src="bower_components/angular-translate/angular-translate.js"></script>
+<script src="http://maps.google.com/maps/api/js"></script>
+<script src="https://rawgit.com/angular-ui/angular-google-maps/2.0.19/dist/angular-google-maps.min.js"></script>
+ <script src="bower_components/ngmap/build/scripts/ng-map.js"></script>
