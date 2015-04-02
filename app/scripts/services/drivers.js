@@ -5,7 +5,9 @@ angular.module('f1App')
     return {
       getDrivers: function() {
 
-        var url = 'http://ergast.com/api/f1/2014/driverStandings.json';
+        var currentyear = new Date().getFullYear();
+
+        var url = 'http://ergast.com/api/f1/'+ currentyear + '/driverStandings.json';
         
 
         return $http.get(url).success(

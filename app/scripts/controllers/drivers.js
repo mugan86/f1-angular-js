@@ -12,6 +12,8 @@ angular.module('f1App')
         $scope.loading = true;
         $scope.dataloaad = false;
 
+        $scope.currentyear = new Date().getFullYear();
+
         driversService.getDrivers()
             .then(function(hizlariak) {
 
