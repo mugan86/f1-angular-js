@@ -3,7 +3,7 @@
 <img src="images/f1.jpg" alt="F1"><br>
 
 <div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
+  <h4>{{"text" | translate}}</h4>
   <p>
     HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
   </p>
@@ -16,7 +16,6 @@
   <h4>Karma</h4>
   <p>Spectacular Test Runner for JavaScript.</p>
 </div>
-
 <map center="[40.866667, 34.566667]" zoom="1">
   <div ng-repeat="marker in circuit">
   <marker  position="[{{marker.latitude}}, {{marker.longitude}}]" title="{{marker.name}}" on-click="showInfoWindow(event, 'bar')">

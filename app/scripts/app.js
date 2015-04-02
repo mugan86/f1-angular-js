@@ -16,8 +16,16 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngMap'
+    'ngMap',
+    'pascalprecht.translate'
   ])
+  .config(function($translateProvider) {
+
+    $translateProvider.translations('eu', translations_eu);
+    $translateProvider.translations('es', translations_es);
+    $translateProvider.preferredLanguage('eu');
+        // console.log("$translateProvider initialized");
+  })
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {

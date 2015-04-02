@@ -8,7 +8,7 @@
  * Controller of the f1App
  */
 angular.module('f1App')
-  .controller('CircuitCtrl', function ($scope, $routeParams, circuitService) {
+  .controller('CircuitCtrl', function($scope, $routeParams, circuitService) {
         circuitService.getCircuitData($routeParams.name)
             .then(function(circuits) {
           //Circuit information

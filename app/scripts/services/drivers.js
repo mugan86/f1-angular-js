@@ -7,6 +7,8 @@ angular.module('f1App')
 
         var currentyear = new Date().getFullYear();
 
+        console.log('Current Year: '+ currentyear);
+
         var url = 'http://ergast.com/api/f1/'+ currentyear + '/driverStandings.json';
         
 
